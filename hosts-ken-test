@@ -1,0 +1,19 @@
+[all:vars]
+ansible_connection=ssh
+#ansible_user=root
+#ansible_ssh_private_key_file=~/.ssh/ibm_rsa
+gather_facts=True
+gathering=smart
+host_key_checking=False
+install_java=True
+install_temp_dir=/tmp/ansible-install
+install_dir=/opt
+python_version=2
+
+[master]
+sparkbox-00   ansible_host_private=192.168.176.16 ansible_host_id=1
+
+[nodes]
+sparkbox-01   ansible_host_private=192.168.176.17  ansible_host_id=2
+sparkbox-02   ansible_host_private=192.168.176.110  ansible_host_id=3
+
